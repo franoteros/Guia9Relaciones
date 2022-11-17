@@ -23,7 +23,7 @@ public class Ej02Main {
             Jugador a = new Jugador(i + 1);
             jugadores.add(a);
         }
-
+        
         System.out.println("Se va a preparar el revolver para el juego");
         Revolver r = new Revolver();
         r.llenarRevolver();

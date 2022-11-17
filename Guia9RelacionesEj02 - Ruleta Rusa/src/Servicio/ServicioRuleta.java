@@ -41,9 +41,9 @@ public class ServicioRuleta {
         for(int i=1;i<j+1;i++){
             Jugador J = new Jugador();
             System.out.println("ID jugador numero " + i);
-            J.setId(leer.nextInt());
+            J.setId(i);
             System.out.println("Nombre jugador numero " + i);
-            J.setNombreJug(leer.next());
+            J.setNombreJug("Jugador");
             jugadores.add(J);
         }
     }
@@ -100,6 +100,29 @@ public class ServicioRuleta {
         }else
             R.setPosActual(R.getPosActual()+1);
     }
+    
+    public boolean disparo(Revolver R, Jugador J){
+        boolean vof = false;
+        if(mojar(R)){
+            J.setMojado(true);
+            vof = true;            
+        }
+        siguienteChorro(R);
+        return vof;
+    }
+    
+    
+    
+    public void llenarJuego(ArrayList<Jugador>J, Revolver R, Juego P){
+        P.setJugadores(J);
+        P.setRevolver(R);
+    }
+    
+    public void ronda(int i){
+        
+    }
+    
+    
     
     
     
